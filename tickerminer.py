@@ -4,7 +4,7 @@ from pandas_datareader import data as pdr
 
 yf.pdr_override()
 
-class SneakerMiner():
+class TickerMiner():
     def __init__(self):
         # Инициализация клиента MongoDB
         self.client = MongoClient('localhost', 27017)
@@ -48,6 +48,6 @@ class SneakerMiner():
 
 
 if __name__ == '__main__':
-    app = SneakerMiner()
+    app = TickerMiner()
     app.getTickerDetails()
     app.getAllStocks()
